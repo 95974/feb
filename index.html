@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+<h1>Dogs</h1>
+    <img src="Images/dog4.jpeg" alt="">
+    <script>
+      let pro1 = new Promise((res,rej)=>{
+        setTimeout(()=>{
+          res('success')
+        },3000)
+        // rej('try again')
+      })
+      // Promise.allSettled([pro1]).then(console.log).catch(console.log)
+      // Promise.all([pro1]).then(console.log).catch(console.log)
+
+
+     async function callFun(){
+        console.log('1')
+        let promiseValue  = await pro1
+        console.log(promiseValue)
+        console.log('3')
+      }
+
+      callFun()
+    </script>
+  </body>
+</html>
